@@ -6,7 +6,7 @@ width: 1440
 
 Follow the presentation
 =========================================================
-## [huit.re/conda](https://huit.re/conda)
+## [maxibor.github.io/conda-presentation/#](https://maxibor.github.io/conda-presentation/#)
 
 What does it mean to install a program ?
 ========================================================
