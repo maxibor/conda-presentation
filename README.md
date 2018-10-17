@@ -1,2 +1,2 @@
-# conda-presentation
-conda-presentation
+# Presentation of Conda for SHH
+Presentation here [maxibor.github.io/conda-presentation/#](https://maxibor.github.io/conda-presentation/#)
