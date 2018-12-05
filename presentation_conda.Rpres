@@ -6,7 +6,7 @@ width: 1440
 
 Follow the presentation
 =========================================================
-## [maxibor.github.io/conda-presentation/#](https://maxibor.github.io/conda-presentation/#)
+## [maxibor.github.io/conda-presentation](https://maxibor.github.io/conda-presentation)
 
 What does it mean to install a program ?
 ========================================================
@@ -197,6 +197,6 @@ incremental: true
 borry@mpi-sdag1:~$ conda env remove -n metaphlan
 ```
 
-### Conda documentation: [conda.io/docs](https://conda.io/docs/)
+### Conda documentation: [conda.io/docs](https://conda.io/docs)
 
 
