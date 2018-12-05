@@ -897,14 +897,14 @@ games:/usr/local/games:/opt/dell/srvadmin/bin
 
 <h3 class="fragment">Installation for Mac</h3>
 
-<pre class="fragment"><code>wget https://repo.continuum.io/miniconda/Miniconda3-3.7.0-Linux-x86_64.sh -O ~/miniconda.sh
-bash ~/miniconda.sh
+<pre class="fragment"><code class="bash">borry@maxime:~$ wget https://repo.continuum.io/miniconda/Miniconda3-3.7.0-Linux-x86_64.sh -O ~/miniconda.sh
+borry@maxime:~$ bash ~/miniconda.sh
 </code></pre>
 
 <h3 class="fragment">Installation for Linux</h3>
 
-<pre class="fragment"><code>https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
-bash ~/miniconda.sh
+<pre class="fragment"><code class="bash">borry@mpi-sdag1:~$ wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
+borry@maxime:~$ bash ~/miniconda.sh
 </code></pre>
 
 </div>
@@ -919,14 +919,14 @@ bash ~/miniconda.sh
 
 <h3 class="fragment">Jupyter/IPython notebook</h3>
 
-<pre class="fragment"><code>conda install jupyter
+<pre class="fragment"><code class="bash">borry@mpi-sdag1:~$ conda install jupyter
 </code></pre>
 
 <h2 class="fragment">Install a package from a specific channel</h2>
 
 <h5 class="fragment">BWA</h5>
 
-<pre class="fragment"><code>conda install -c bioconda bwa
+<pre class="fragment"><code class="bash">borry@mpi-sdag1:~$ conda install -c bioconda bwa
 </code></pre>
 
 <h3 class="fragment"><a href="https://bioconda.github.io/recipes.html">Bioconda</a>: Channel for bioinformatics packages</h3>
@@ -941,7 +941,7 @@ bash ~/miniconda.sh
 
 <h5 class="fragment">By default, you&#39;re in the <strong>base</strong> environment</h5>
 
-<pre class="fragment"><code>borry@mpi-sdag1:~$ conda env list
+<pre class="fragment"><code class="bash">borry@mpi-sdag1:~$ conda env list
 # conda environments:
 #
 base          *  /projects1/clusterhomes/borry/miniconda3
@@ -949,7 +949,7 @@ base          *  /projects1/clusterhomes/borry/miniconda3
 
 <h5 class="fragment">But can create new environments&hellip;</h5>
 
-<pre class="fragment"><code>conda create -n myEnvName
+<pre class="fragment"><code class="bash">borry@mpi-sdag1:~$ conda create -n myEnvName
 </code></pre>
 
 </div>
@@ -960,19 +960,19 @@ base          *  /projects1/clusterhomes/borry/miniconda3
 <div class="slideContent" >
 <h5 class="fragment">Change your current environemnt (activate)</h5>
 
-<pre class="fragment"><code>borry@mpi-sdag1:~$ source activate myEnvName
+<pre class="fragment"><code class="bash">borry@mpi-sdag1:~$ source activate myEnvName
 </code></pre>
 
 <h5 class="fragment"><strong>Note that your prompt now includes the name of the active environment</strong></h5>
 
 <h5 class="fragment">Install a package in this environment, for example, RStudio</h5>
 
-<pre class="fragment"><code>(myEnvName) borry@mpi-sdag1:~$ conda install -c r rstudio
+<pre class="fragment"><code class="bash">(myEnvName) borry@mpi-sdag1:~$ conda install -c r rstudio
 </code></pre>
 
 <h5 class="fragment">And go back to the <strong>base</strong> environment</h5>
 
-<pre class="fragment"><code>(myEnvName) borry@mpi-sdag1:~$ source deactivate
+<pre class="fragment"><code class="bash">(myEnvName) borry@mpi-sdag1:~$ source deactivate
 </code></pre>
 
 <h5 class="fragment"><strong>The packages installed in one environement are not accessible from outside !</strong></h5>
@@ -985,7 +985,7 @@ base          *  /projects1/clusterhomes/borry/miniconda3
 <div class="slideContent" >
 <p><a href="http://marbl.github.io/Krona/examples/rdp.krona.html">Krona plots</a></p>
 
-<pre class="fragment"><code>borry@mpi-sdag1:~$ conda create -n metaphlan
+<pre class="fragment"><code class="bash">borry@mpi-sdag1:~$ conda create -n metaphlan
 borry@mpi-sdag1:~$ source activate metaphlan
 (metaphlan) borry@mpi-sdag1:~$conda install -c bioconda metaphlan2
 # Now you can use metaphlan !
@@ -994,12 +994,12 @@ borry@mpi-sdag1:~$ source activate metaphlan
 
 <p class="fragment">Now let&#39;s share our environement !</p>
 
-<pre class="fragment"><code>(metaphlan) borry@mpi-sdag1:~$ conda env export &gt; metaphlan_env.yml
+<pre class="fragment"><code class="bash">(metaphlan) borry@mpi-sdag1:~$ conda env export &gt; metaphlan_env.yml
 </code></pre>
 
 <p class="fragment">And recreate it on another machine from the environment file</p>
 
-<pre class="fragment"><code>borry@maxime:~$ conda env create -f metaphlan_env.yml
+<pre class="fragment"><code class="bash">borry@maxime:~$ conda env create -f metaphlan_env.yml
 </code></pre>
 
 </div>
@@ -1010,17 +1010,17 @@ borry@mpi-sdag1:~$ source activate metaphlan
 <div class="slideContent" >
 <h5 class="fragment">List installed packages and versions in an environment</h5>
 
-<pre class="fragment"><code>(metaphlan) borry@mpi-sdag1:~$ conda list
+<pre class="fragment"><code class="bash">(metaphlan) borry@mpi-sdag1:~$ conda list
 </code></pre>
 
 <h5 class="fragment">Uninstall a package (here Krona)</h5>
 
-<pre class="fragment"><code>(metaphlan) borry@mpi-sdag1:~$ conda remove krona
+<pre class="fragment"><code class="bash">(metaphlan) borry@mpi-sdag1:~$ conda remove krona
 </code></pre>
 
 <h5 class="fragment">Delete an environment</h5>
 
-<pre class="fragment"><code>borry@mpi-sdag1:~$ conda env remove -n metaphlan
+<pre class="fragment"><code class="bash">borry@mpi-sdag1:~$ conda env remove -n metaphlan
 </code></pre>
 
 <h3 class="fragment">Conda documentation: <a href="https://conda.io/docs">conda.io/docs</a></h3>

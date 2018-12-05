@@ -92,14 +92,16 @@ incremental: true
 - **Miniconda** (bare minimum)
 
 ### Installation for Mac
-```
-wget https://repo.continuum.io/miniconda/Miniconda3-3.7.0-Linux-x86_64.sh -O ~/miniconda.sh
-bash ~/miniconda.sh
+
+```bash
+borry@maxime:~$ wget https://repo.continuum.io/miniconda/Miniconda3-3.7.0-Linux-x86_64.sh -O ~/miniconda.sh
+borry@maxime:~$ bash ~/miniconda.sh
 ```
 ### Installation for Linux
-```
-https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
-bash ~/miniconda.sh
+
+```bash
+borry@mpi-sdag1:~$ wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
+borry@maxime:~$ bash ~/miniconda.sh
 ```
 
 Using conda
@@ -109,13 +111,15 @@ incremental: true
 ##### When you install a package, conda automatically handles the installation of all its dependancies
 
 ### Jupyter/IPython notebook
-```
-conda install jupyter
+
+```bash
+borry@mpi-sdag1:~$ conda install jupyter
 ```
 ## Install a package from a specific channel
 ##### BWA
-```
-conda install -c bioconda bwa
+
+```bash
+borry@mpi-sdag1:~$ conda install -c bioconda bwa
 ```
 ### [Bioconda](https://bioconda.github.io/recipes.html): Channel for bioinformatics packages
 
@@ -125,7 +129,8 @@ incremental: true
 ## An environement is an isolated sandbox that allows a fine control on program's versions and dependancies
 
 ##### By default, you're in the **base** environment
-```
+
+```bash
 borry@mpi-sdag1:~$ conda env list
 # conda environments:
 #
@@ -133,27 +138,31 @@ base          *  /projects1/clusterhomes/borry/miniconda3
 ```
 
 ##### But can create new environments...
-```
-conda create -n myEnvName
+
+```bash
+borry@mpi-sdag1:~$ conda create -n myEnvName
 ```
 Everything with conda is an environment(2)
 ========================================================
 incremental: true
 
 ##### Change your current environemnt (activate)
-```
+
+```bash
 borry@mpi-sdag1:~$ source activate myEnvName
 ```
 
 ##### **Note that your prompt now includes the name of the active environment**
 
 ##### Install a package in this environment, for example, RStudio
-```
+
+```bash
 (myEnvName) borry@mpi-sdag1:~$ conda install -c r rstudio
 ```
 
 ##### And go back to the **base** environment
-```
+
+```bash
 (myEnvName) borry@mpi-sdag1:~$ source deactivate
 ```
 
@@ -165,7 +174,8 @@ incremental: true
 
 [Krona plots](http://marbl.github.io/Krona/examples/rdp.krona.html)
 
-```
+
+```bash
 borry@mpi-sdag1:~$ conda create -n metaphlan
 borry@mpi-sdag1:~$ source activate metaphlan
 (metaphlan) borry@mpi-sdag1:~$conda install -c bioconda metaphlan2
@@ -174,12 +184,14 @@ borry@mpi-sdag1:~$ source activate metaphlan
 ```
 
 Now let's share our environement !
-```
+
+```bash
 (metaphlan) borry@mpi-sdag1:~$ conda env export > metaphlan_env.yml
 ```
 
 And recreate it on another machine from the environment file
-```
+
+```bash
 borry@maxime:~$ conda env create -f metaphlan_env.yml
 ```
 
@@ -187,17 +199,20 @@ Other useful conda commands
 ========================================================
 incremental: true
 ##### List installed packages and versions in an environment
-```
+
+```bash
 (metaphlan) borry@mpi-sdag1:~$ conda list
 ```
 
 ##### Uninstall a package (here Krona)
-```
+
+```bash
 (metaphlan) borry@mpi-sdag1:~$ conda remove krona
 ```
 
 ##### Delete an environment
-```
+
+```bash
 borry@mpi-sdag1:~$ conda env remove -n metaphlan
 ```
 
