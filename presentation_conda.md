@@ -122,6 +122,7 @@ borry@mpi-sdag1:~$ conda install jupyter
 borry@mpi-sdag1:~$ conda install -c bioconda bwa
 ```
 ### [Bioconda](https://bioconda.github.io/recipes.html): Channel for bioinformatics packages
+##### [Bioconda: sustainable and comprehensive software distribution for the life sciences](https://www.nature.com/articles/s41592-018-0046-7)
 
 Everything with conda is an environment
 ========================================================
