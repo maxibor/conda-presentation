@@ -1,4 +1,4 @@
-Finger in the nose installations and virtual environments with conda
+Easy installations and virtual environments with conda
 ========================================================
 author: Maxime Borry
 date: 17/10/2018
