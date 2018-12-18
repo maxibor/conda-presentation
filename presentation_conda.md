@@ -88,7 +88,7 @@ Install conda
 ========================================================
 incremental: true
 ### Two distributions:
-- Anaconda (fully fledged, heavy)
+- Anaconda (fully featured, heavy)
 - **Miniconda** (bare minimum)
 
 ### Installation for Mac
