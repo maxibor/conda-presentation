@@ -94,13 +94,13 @@ incremental: true
 ### Installation for Mac
 
 ```bash
-borry@maxime:~$ wget https://repo.continuum.io/miniconda/Miniconda3-3.7.0-Linux-x86_64.sh -O ~/miniconda.sh
+borry@maxime:~$ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O ~/miniconda.sh
 borry@maxime:~$ bash ~/miniconda.sh
 ```
 ### Installation for Linux
 
 ```bash
-borry@mpi-sdag1:~$ wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
+borry@mpi-sdag1:~$ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
 borry@maxime:~$ bash ~/miniconda.sh
 ```
 
@@ -150,7 +150,7 @@ incremental: true
 ##### Change your current environemnt (activate)
 
 ```bash
-borry@mpi-sdag1:~$ source activate myEnvName
+borry@mpi-sdag1:~$ conda activate myEnvName
 ```
 
 ##### **Note that your prompt now includes the name of the active environment**
@@ -164,7 +164,7 @@ borry@mpi-sdag1:~$ source activate myEnvName
 ##### And go back to the **base** environment
 
 ```bash
-(myEnvName) borry@mpi-sdag1:~$ source deactivate
+(myEnvName) borry@mpi-sdag1:~$ conda deactivate
 ```
 
 ##### **The packages installed in one environement are not accessible from outside !**
@@ -178,8 +178,8 @@ incremental: true
 
 ```bash
 borry@mpi-sdag1:~$ conda create -n metaphlan
-borry@mpi-sdag1:~$ source activate metaphlan
-(metaphlan) borry@mpi-sdag1:~$conda install -c bioconda metaphlan2
+borry@mpi-sdag1:~$ conda activate metaphlan
+(metaphlan) borry@mpi-sdag1:~$ conda install -c bioconda metaphlan2
 # Now you can use metaphlan !
 (metaphlan) conda install -c bioconda krona
 ```
