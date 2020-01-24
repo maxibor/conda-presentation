@@ -1,7 +1,7 @@
 Easy installations and virtual environments with conda
 ========================================================
 author: Maxime Borry
-date: 17/10/2018
+date: 24/01/2020
 width: 1440
 
 Follow the presentation
@@ -28,7 +28,7 @@ games:/usr/local/games:/opt/dell/srvadmin/bin
 - `/usr/bin`
 - ...
 
-### You can't "install" programms on SDAG because you don't have write access to these directories
+### When can't "install" programms on a computer, it's because you don't have write access to these directories
 
 What's in my path ?
 ========================================================
@@ -37,15 +37,16 @@ For example, let's have a look at `/usr/bin` !
 
 
 ```bash
-borry@mpi-sdag1:~$ ls /usr/bin
+borry@mpi-sdag1:~$ ls -1 /usr/bin
 ...
-erb                             savelog
-erb1.9.1                        sbatch
-erb2.0                          sbcast
-evince                          scancel
-evince-previewer                scconf-bootinfo
-evince-thumbnailer              scconf-tool
-ex                              scontrol
+head
+headerdoc2html
+heap
+heap32
+hexdump
+hidutil
+hiutil
+host
 ...
 ```
 
@@ -113,13 +114,13 @@ incremental: true
 ### Jupyter/IPython notebook
 
 ```bash
-borry@mpi-sdag1:~$ conda install jupyter
+(base)borry@mpi-sdag1:~$ conda install jupyter
 ```
 ## Install a package from a specific channel
 ##### BWA
 
 ```bash
-borry@mpi-sdag1:~$ conda install -c bioconda bwa
+(base)borry@mpi-sdag1:~$ conda install -c bioconda bwa
 ```
 ### [Bioconda](https://bioconda.github.io/recipes.html): Channel for bioinformatics packages
 ##### [Bioconda: sustainable and comprehensive software distribution for the life sciences](https://www.nature.com/articles/s41592-018-0046-7)
@@ -132,7 +133,7 @@ incremental: true
 ##### By default, you're in the **base** environment
 
 ```bash
-borry@mpi-sdag1:~$ conda env list
+(base)borry@mpi-sdag1:~$ conda env list
 # conda environments:
 #
 base          *  /projects1/clusterhomes/borry/miniconda3
@@ -141,7 +142,7 @@ base          *  /projects1/clusterhomes/borry/miniconda3
 ##### But can create new environments...
 
 ```bash
-borry@mpi-sdag1:~$ conda create -n myEnvName
+(base)borry@mpi-sdag1:~$ conda create -n myEnvName
 ```
 Everything with conda is an environment(2)
 ========================================================
@@ -150,7 +151,7 @@ incremental: true
 ##### Change your current environemnt (activate)
 
 ```bash
-borry@mpi-sdag1:~$ conda activate myEnvName
+(base)borry@mpi-sdag1:~$ conda activate myEnvName
 ```
 
 ##### **Note that your prompt now includes the name of the active environment**
@@ -177,8 +178,8 @@ incremental: true
 
 
 ```bash
-borry@mpi-sdag1:~$ conda create -n metaphlan
-borry@mpi-sdag1:~$ conda activate metaphlan
+(base)borry@mpi-sdag1:~$ conda create -n metaphlan
+(base)borry@mpi-sdag1:~$ conda activate metaphlan
 (metaphlan) borry@mpi-sdag1:~$ conda install -c bioconda metaphlan2
 # Now you can use metaphlan !
 (metaphlan) conda install -c bioconda krona
@@ -193,7 +194,7 @@ Now let's share our environement !
 And recreate it on another machine from the environment file
 
 ```bash
-borry@maxime:~$ conda env create -f metaphlan_env.yml
+(base)borry@maxime:~$ conda env create -f metaphlan_env.yml
 ```
 
 Other useful conda commands
@@ -214,7 +215,7 @@ incremental: true
 ##### Delete an environment
 
 ```bash
-borry@mpi-sdag1:~$ conda env remove -n metaphlan
+(base)borry@mpi-sdag1:~$ conda env remove -n metaphlan
 ```
 
 ### Conda documentation: [conda.io/docs](https://conda.io/docs)
