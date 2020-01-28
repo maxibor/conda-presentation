@@ -116,6 +116,7 @@ incremental: true
 ```
 ### [Bioconda](https://bioconda.github.io/recipes.html): Channel for bioinformatics packages
 ##### [Bioconda: sustainable and comprehensive software distribution for the life sciences](https://www.nature.com/articles/s41592-018-0046-7)
+### [conda-forge](https://conda-forge.org/feedstocks/): community-led (huge) collection of recipes
 
 Everything with conda is an environment
 ========================================================

@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 Easy installations and virtual environments with conda
 ========================================================
 author: Maxime Borry
@@ -10,7 +15,7 @@ Follow the presentation
 
 What does it mean to install a program ?
 ========================================================
-incremental: true
+
 ### -> Copy/move the executable of the program in the `PATH`
 
 ### What is the `PATH` ?
@@ -32,7 +37,7 @@ games:/usr/local/games:/opt/dell/srvadmin/bin
 
 What's in my path ?
 ========================================================
-incremental: true
+
 For example, let's have a look at `/usr/bin` !
 
 
@@ -52,7 +57,7 @@ host
 
 Great, but what about Conda ?
 ========================================================
-incremental: true
+
 
 ### I have a confession: this is not my real path
 
@@ -77,7 +82,7 @@ games:/usr/local/games:/opt/dell/srvadmin/bin
 ```
 Conda
 ========================================================
-incremental: true
+
 "Conda is an open source, **cross-platform**, **language-agnostic** **package and environment management system** distributed by Continuum Analytics."
 
 - Free
@@ -87,7 +92,7 @@ incremental: true
 
 Install conda
 ========================================================
-incremental: true
+
 ### Two distributions:
 - Anaconda (fully featured, heavy)
 - **Miniconda** (bare minimum)
@@ -107,7 +112,7 @@ borry@maxime:~$ bash ~/miniconda.sh
 
 Using conda
 ========================================================
-incremental: true
+
 ## Install a package
 ##### When you install a package, conda automatically handles the installation of all its dependancies
 
@@ -124,10 +129,11 @@ incremental: true
 ```
 ### [Bioconda](https://bioconda.github.io/recipes.html): Channel for bioinformatics packages
 ##### [Bioconda: sustainable and comprehensive software distribution for the life sciences](https://www.nature.com/articles/s41592-018-0046-7)
+### [conda-forge](https://conda-forge.org/feedstocks/): community-led (huge) collection of recipes
 
 Everything with conda is an environment
 ========================================================
-incremental: true
+
 ## An environement is an isolated sandbox that allows a fine control on program's versions and dependancies
 
 ##### By default, you're in the **base** environment
@@ -146,7 +152,7 @@ base          *  /projects1/clusterhomes/borry/miniconda3
 ```
 Everything with conda is an environment(2)
 ========================================================
-incremental: true
+
 
 ##### Change your current environemnt (activate)
 
@@ -172,7 +178,7 @@ incremental: true
 
 Let's create an environment for MetaPhlan2 and Krona
 ========================================================
-incremental: true
+
 
 [Krona plots](http://marbl.github.io/Krona/examples/rdp.krona.html)
 
@@ -199,7 +205,7 @@ And recreate it on another machine from the environment file
 
 Other useful conda commands
 ========================================================
-incremental: true
+
 ##### List installed packages and versions in an environment
 
 ```bash
