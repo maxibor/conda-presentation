@@ -874,7 +874,7 @@ games:/usr/local/games:/opt/dell/srvadmin/bin
 <section data-transition="linear" data-transition-speed="default">
 <h3>Conda</h3>
 <div class="slideContent" >
-<p>&ldquo;Conda is an open source, <strong>cross-platform</strong>, <strong>language-agnostic</strong> <strong>package and environment management system</strong> distributed by Continuum Analytics.&rdquo;</p>
+<p>&ldquo;Conda is an open source, <strong>cross-platform</strong>, <strong>language-agnostic</strong> <strong>package and environment management system</strong> distributed by Anaconda.&rdquo;</p>
 
 <ul>
 <li class="fragment">Free</li>
@@ -918,7 +918,7 @@ borry@maxime:~$ bash ~/miniconda.sh
 
 <h5 class="fragment">When you install a package, conda automatically handles the installation of all its dependancies</h5>
 
-<h3 class="fragment">Jupyter/IPython notebook</h3>
+<h3 class="fragment">Jupyter notebook</h3>
 
 <pre class="fragment"><code class="bash">(base)borry@mpi-sdag1:~$ conda install jupyter
 </code></pre>
@@ -972,12 +972,12 @@ base          *  /projects1/clusterhomes/borry/miniconda3
 
 <h5 class="fragment">Install a package in this environment, for example, RStudio</h5>
 
-<pre class="fragment"><code class="bash">(myEnvName) borry@mpi-sdag1:~$ conda install -c r rstudio
+<pre class="fragment"><code class="bash">(myEnvName)borry@mpi-sdag1:~$ conda install -c r rstudio
 </code></pre>
 
 <h5 class="fragment">And go back to the <strong>base</strong> environment</h5>
 
-<pre class="fragment"><code class="bash">(myEnvName) borry@mpi-sdag1:~$ conda deactivate
+<pre class="fragment"><code class="bash">(myEnvName)borry@mpi-sdag1:~$ conda deactivate
 </code></pre>
 
 <h5 class="fragment"><strong>The packages installed in one environement are not accessible from outside !</strong></h5>
@@ -992,14 +992,14 @@ base          *  /projects1/clusterhomes/borry/miniconda3
 
 <pre class="fragment"><code class="bash">(base)borry@mpi-sdag1:~$ conda create -n metaphlan
 (base)borry@mpi-sdag1:~$ conda activate metaphlan
-(metaphlan) borry@mpi-sdag1:~$ conda install -c bioconda metaphlan2
+(metaphlan)borry@mpi-sdag1:~$ conda install -c bioconda metaphlan2
 # Now you can use metaphlan !
-(metaphlan) conda install -c bioconda krona
+(metaphlan)conda install -c bioconda krona
 </code></pre>
 
 <p class="fragment">Now let&#39;s share our environement !</p>
 
-<pre class="fragment"><code class="bash">(metaphlan) borry@mpi-sdag1:~$ conda env export &gt; metaphlan_env.yml
+<pre class="fragment"><code class="bash">(metaphlan)borry@mpi-sdag1:~$ conda env export &gt; metaphlan_env.yml
 </code></pre>
 
 <p class="fragment">And recreate it on another machine from the environment file</p>
@@ -1020,7 +1020,7 @@ base          *  /projects1/clusterhomes/borry/miniconda3
 
 <h5 class="fragment">Uninstall a package (here Krona)</h5>
 
-<pre class="fragment"><code class="bash">(metaphlan) borry@mpi-sdag1:~$ conda remove krona
+<pre class="fragment"><code class="bash">(metaphlan)borry@mpi-sdag1:~$ conda remove krona
 </code></pre>
 
 <h5 class="fragment">Delete an environment</h5>
@@ -1029,6 +1029,18 @@ base          *  /projects1/clusterhomes/borry/miniconda3
 </code></pre>
 
 <h3 class="fragment">Conda documentation: <a href="https://conda.io/docs">conda.io/docs</a></h3>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Bonus: building conda recipes</h3>
+<div class="slideContent" >
+<ul>
+<li><a href="https://docs.conda.io/projects/conda-build/en/latest/user-guide/index.html">conda-build documentation</a></li>
+<li><a href="https://docs.conda.io/projects/conda-build/en/latest/user-guide/tutorials/build-r-pkgs.html">conda recipes skeleton for R packages on CRAN</a></li>
+<li><a href="https://github.com/marcelotrevisani/grayskull">conda recipes skeleton for Python packages on Pypi with <strong>Grayskull</strong></a></li>
+</ul>
 
 </div>
 

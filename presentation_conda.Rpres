@@ -74,7 +74,7 @@ games:/usr/local/games:/opt/dell/srvadmin/bin
 Conda
 ========================================================
 incremental: true
-"Conda is an open source, **cross-platform**, **language-agnostic** **package and environment management system** distributed by Continuum Analytics."
+"Conda is an open source, **cross-platform**, **language-agnostic** **package and environment management system** distributed by Anaconda."
 
 - Free
 - **No admin rights required**
@@ -105,7 +105,7 @@ incremental: true
 ## Install a package
 ##### When you install a package, conda automatically handles the installation of all its dependancies
 
-### Jupyter/IPython notebook
+### Jupyter notebook
 ```{bash, eval=FALSE}
 (base)borry@mpi-sdag1:~$ conda install jupyter
 ```
@@ -148,12 +148,12 @@ incremental: true
 
 ##### Install a package in this environment, for example, RStudio
 ```{bash, eval=FALSE}
-(myEnvName) borry@mpi-sdag1:~$ conda install -c r rstudio
+(myEnvName)borry@mpi-sdag1:~$ conda install -c r rstudio
 ```
 
 ##### And go back to the **base** environment
 ```{bash, eval=FALSE}
-(myEnvName) borry@mpi-sdag1:~$ conda deactivate
+(myEnvName)borry@mpi-sdag1:~$ conda deactivate
 ```
 
 ##### **The packages installed in one environement are not accessible from outside !**
@@ -167,14 +167,14 @@ incremental: true
 ```{bash, eval=FALSE}
 (base)borry@mpi-sdag1:~$ conda create -n metaphlan
 (base)borry@mpi-sdag1:~$ conda activate metaphlan
-(metaphlan) borry@mpi-sdag1:~$ conda install -c bioconda metaphlan2
+(metaphlan)borry@mpi-sdag1:~$ conda install -c bioconda metaphlan2
 # Now you can use metaphlan !
-(metaphlan) conda install -c bioconda krona
+(metaphlan)conda install -c bioconda krona
 ```
 
 Now let's share our environement !
 ```{bash, eval=FALSE}
-(metaphlan) borry@mpi-sdag1:~$ conda env export > metaphlan_env.yml
+(metaphlan)borry@mpi-sdag1:~$ conda env export > metaphlan_env.yml
 ```
 
 And recreate it on another machine from the environment file
@@ -192,7 +192,7 @@ incremental: true
 
 ##### Uninstall a package (here Krona)
 ```{bash, eval=FALSE}
-(metaphlan) borry@mpi-sdag1:~$ conda remove krona
+(metaphlan)borry@mpi-sdag1:~$ conda remove krona
 ```
 
 ##### Delete an environment
@@ -203,3 +203,9 @@ incremental: true
 ### Conda documentation: [conda.io/docs](https://conda.io/docs)
 
 
+Bonus: building conda recipes
+========================================================
+
+- [conda-build documentation](https://docs.conda.io/projects/conda-build/en/latest/user-guide/index.html)
+- [conda recipes skeleton for R packages on CRAN](https://docs.conda.io/projects/conda-build/en/latest/user-guide/tutorials/build-r-pkgs.html)
+- [conda recipes skeleton for Python packages on Pypi with **Grayskull**](https://github.com/marcelotrevisani/grayskull)

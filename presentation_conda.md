@@ -1,8 +1,3 @@
----
-output:
-  pdf_document: default
-  html_document: default
----
 Easy installations and virtual environments with conda
 ========================================================
 author: Maxime Borry
@@ -15,7 +10,7 @@ Follow the presentation
 
 What does it mean to install a program ?
 ========================================================
-
+incremental: true
 ### -> Copy/move the executable of the program in the `PATH`
 
 ### What is the `PATH` ?
@@ -37,7 +32,7 @@ games:/usr/local/games:/opt/dell/srvadmin/bin
 
 What's in my path ?
 ========================================================
-
+incremental: true
 For example, let's have a look at `/usr/bin` !
 
 
@@ -57,7 +52,7 @@ host
 
 Great, but what about Conda ?
 ========================================================
-
+incremental: true
 
 ### I have a confession: this is not my real path
 
@@ -82,8 +77,8 @@ games:/usr/local/games:/opt/dell/srvadmin/bin
 ```
 Conda
 ========================================================
-
-"Conda is an open source, **cross-platform**, **language-agnostic** **package and environment management system** distributed by Continuum Analytics."
+incremental: true
+"Conda is an open source, **cross-platform**, **language-agnostic** **package and environment management system** distributed by Anaconda."
 
 - Free
 - **No admin rights required**
@@ -92,7 +87,7 @@ Conda
 
 Install conda
 ========================================================
-
+incremental: true
 ### Two distributions:
 - Anaconda (fully featured, heavy)
 - **Miniconda** (bare minimum)
@@ -112,11 +107,11 @@ borry@maxime:~$ bash ~/miniconda.sh
 
 Using conda
 ========================================================
-
+incremental: true
 ## Install a package
 ##### When you install a package, conda automatically handles the installation of all its dependancies
 
-### Jupyter/IPython notebook
+### Jupyter notebook
 
 ```bash
 (base)borry@mpi-sdag1:~$ conda install jupyter
@@ -133,7 +128,7 @@ Using conda
 
 Everything with conda is an environment
 ========================================================
-
+incremental: true
 ## An environement is an isolated sandbox that allows a fine control on program's versions and dependancies
 
 ##### By default, you're in the **base** environment
@@ -152,7 +147,7 @@ base          *  /projects1/clusterhomes/borry/miniconda3
 ```
 Everything with conda is an environment(2)
 ========================================================
-
+incremental: true
 
 ##### Change your current environemnt (activate)
 
@@ -165,20 +160,20 @@ Everything with conda is an environment(2)
 ##### Install a package in this environment, for example, RStudio
 
 ```bash
-(myEnvName) borry@mpi-sdag1:~$ conda install -c r rstudio
+(myEnvName)borry@mpi-sdag1:~$ conda install -c r rstudio
 ```
 
 ##### And go back to the **base** environment
 
 ```bash
-(myEnvName) borry@mpi-sdag1:~$ conda deactivate
+(myEnvName)borry@mpi-sdag1:~$ conda deactivate
 ```
 
 ##### **The packages installed in one environement are not accessible from outside !**
 
 Let's create an environment for MetaPhlan2 and Krona
 ========================================================
-
+incremental: true
 
 [Krona plots](http://marbl.github.io/Krona/examples/rdp.krona.html)
 
@@ -186,15 +181,15 @@ Let's create an environment for MetaPhlan2 and Krona
 ```bash
 (base)borry@mpi-sdag1:~$ conda create -n metaphlan
 (base)borry@mpi-sdag1:~$ conda activate metaphlan
-(metaphlan) borry@mpi-sdag1:~$ conda install -c bioconda metaphlan2
+(metaphlan)borry@mpi-sdag1:~$ conda install -c bioconda metaphlan2
 # Now you can use metaphlan !
-(metaphlan) conda install -c bioconda krona
+(metaphlan)conda install -c bioconda krona
 ```
 
 Now let's share our environement !
 
 ```bash
-(metaphlan) borry@mpi-sdag1:~$ conda env export > metaphlan_env.yml
+(metaphlan)borry@mpi-sdag1:~$ conda env export > metaphlan_env.yml
 ```
 
 And recreate it on another machine from the environment file
@@ -205,7 +200,7 @@ And recreate it on another machine from the environment file
 
 Other useful conda commands
 ========================================================
-
+incremental: true
 ##### List installed packages and versions in an environment
 
 ```bash
@@ -215,7 +210,7 @@ Other useful conda commands
 ##### Uninstall a package (here Krona)
 
 ```bash
-(metaphlan) borry@mpi-sdag1:~$ conda remove krona
+(metaphlan)borry@mpi-sdag1:~$ conda remove krona
 ```
 
 ##### Delete an environment
@@ -227,3 +222,9 @@ Other useful conda commands
 ### Conda documentation: [conda.io/docs](https://conda.io/docs)
 
 
+Bonus: building conda recipes
+========================================================
+
+- [conda-build documentation](https://docs.conda.io/projects/conda-build/en/latest/user-guide/index.html)
+- [conda recipes skeleton for R packages on CRAN](https://docs.conda.io/projects/conda-build/en/latest/user-guide/tutorials/build-r-pkgs.html)
+- [conda recipes skeleton for Python packages on Pypi with **Grayskull**](https://github.com/marcelotrevisani/grayskull)
