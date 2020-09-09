@@ -202,6 +202,17 @@ incremental: true
 
 ### Conda documentation: [conda.io/docs](https://conda.io/docs)
 
+Faster conda with Mamba
+==========================
+
+[Mamba](https://github.com/mamba-org/mamba) is conda drop-in replacement, with a faster dependancy solver.
+
+```bash
+conda install -c conda-forge mamba
+```
+
+
+
 
 Bonus: building conda recipes
 ========================================================
